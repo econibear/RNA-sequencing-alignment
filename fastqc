@@ -1,0 +1,17 @@
+
+#FASTQC 
+#Load in fastqc module and create the directorys needed. Then run the code
+
+#PBS -lselect=1:ncpus=8:mem=62gb
+#PBS -lwalltime=24:00:00
+
+cd $RDS_PROJECT/ins_rna_seq/live/final_mergedfasta/INS0300s_for_trim/trim_output
+
+module load fastqc
+mkdir $RDS_PROJECT/ins_rna_seq/live/final_mergedfasta/INS0300s_for_trim/trim_output/tmp
+mkdir $RDS_PROJECT/ins_rna_seq/live/final_mergedfasta/INS0300s_for_trim/trim_output/fastq_out
+
+fastqc -t 8 -d $RDS_PROJECT/ins_rna_seq/live/final_mergedfasta/INS0300s_for_trim/trim_output/tmp -o $RDS_PROJECT/ins_rna_seq/live/final_mergedfasta/INS0300s_for_trim/trim_output/fastq_out -f fastq $RDS_PROJECT/ins_rna_seq/live/final_mergedfasta/INS0300s_for_trim/trim_output/*.fq.gz
+
+#This took about 20 mins for 100 samples
+#Uses 8 threads (does 8 things at once), puts the temp files in a directory called tmp, outputs into a folder called fastq_out and -f makes it uses the specified file format (in this case, fastq.qz)
