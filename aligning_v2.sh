@@ -10,7 +10,7 @@ for prefix in $(ls *.fq.gz | sed -r 's/_R[12]_001_merged_val_[12].fq.gz//' | uni
 do
 STAR \ #initiate STAR
 --runThreadN 8 \ #number of cores
---outFileNamePrefix $RDS_PROJECT/ins_rna_seq/live/STAR_output/${prefix} \ #prefix to all output files
+--outFileNamePrefix $RDS_PROJECT/ins_rna_seq/live/STAR_output/${prefix} \ #location of all output files
 --outSAMattributes NH HI AS NM MD \
 --runMode alignReads \ #as opposed to genomeGenerate for indexing a genome
 --quantMode TranscriptomeSAM GeneCounts \ #choose the outputs for the files
