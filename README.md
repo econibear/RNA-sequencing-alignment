@@ -11,5 +11,6 @@ Prior to analysing RNA-sequencing data, you need to pre process the data. This e
 
 <h2> Trim Galore! </h2>
 
+<a href="https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md">User guide</a> for Trim Galore!
 
 <code> code </code>
