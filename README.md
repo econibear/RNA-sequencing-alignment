@@ -3,21 +3,21 @@
 Prior to analysing RNA-sequencing data, you need to pre process the data. This entails:
 
 <ol>
-  <li>Trimming off adapter sequences and removing low quality reads <i>(Trim Galore!)</i></li>
+  <li>Quality and adapter trimming <i>(Trim Galore!)</i></li>
   <li>QC-ing the results <i>(FastQC & MultiQC)</i></li>
-  <li>Aligning the reads to a genome <i>(STAR Align)</i></li>
+  <li>Aligning to a genome <i>(STAR Align)</i></li>
   <li> Creating a read count matrix <i>(DESeq2 - Feature Counts)</i></li>
 </ol>
 
-After pre processing, normalisation and multiple QC steps occurs before the generation of differentially expressed gene (DEG) lists
+After pre processing, normalisation and multiple QC steps occurs before the generation of differentially expressed gene (DEG) lists.
 
 <h2> Trim Galore! </h2>
 
-<a href="https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md">User guide</a> for Trim Galore!
+<a href="https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md">User guide</a> for Trim Galore! This removes adapter sequences as well as low quality reads.
 
-<h2> FastQC </h2>
+<h2> FastQC & MultiQC</h2>
 
-<a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a> is a tool for quality controlling high throughput sequence data. It gives you a html and txt file report for each sample. If you have lots of samples, use MultiQC to combine them all together in an easy to look format.
+<a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a> is a tool for quality controlling high throughput sequence data. It gives you a html and txt file report for each sample. If you have lots of samples, use <a href="https://multiqc.info/">MultiQC</a> to combine them all together in an easy to see format.
 
 <code> module load multiqc </code> <br>
 <code> source activate multiqc </code> <br>
@@ -32,7 +32,7 @@ After pre processing, normalisation and multiple QC steps occurs before the gene
 
 <h2> Feature counts</h2>
 
-We did this by loading the files straight into R.
+We did this by loading the files straight into R. The DESeq2 package is required as well as a metadata .txt file detailing the sample numbers and timepoints.
 
 
 <h2> Submitting jobs </h2>
