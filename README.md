@@ -15,6 +15,17 @@ After pre processing, normalisation and QC occurs before the generation of diffe
 
 <a href="https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md">User guide</a> for Trim Galore!
 
+<h2> FastQC </h2>
+
+<a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a> is a tool for quality controlling high throughput sequence data. It gives you a html and txt file report for each sample. If you have lots of samples, use MultiQC to combine them all together in an easy to look format.
+
+<code> module load multiqc </code> <br>
+<code> source activate multiqc </code> <br>
+<code> multiqc -n trimmed_multiqc_report . #combines all files in the current directory </code> 
+
+<h2> STAR align </h2> 
+
+<a href="https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html">Helpful guide</a> for STAR align
 
 
 
