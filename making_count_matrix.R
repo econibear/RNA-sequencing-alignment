@@ -1,6 +1,7 @@
 #Making count matrices
 
-library(DESeq2)
+#Load in required packages
+library(DESeq2) 
 library(RColorBrewer)
 library(gplots)
 library(Rsubread)
@@ -11,6 +12,7 @@ setwd("/Volumes/ec1016/projects/ins_rna_seq/live")
 #Load in the metadata
 metadata = read.delim("Sample_list_sent_for_sequencing.txt", header=T)
 head(metadata)
+
 
 files <- file.path("/Volumes/ec1016/projects/ins_rna_seq/live/STAR_output", paste0(metadata$INS_num,"Aligned.sortedByCoord.out.bam"))
 
