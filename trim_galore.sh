@@ -1,5 +1,6 @@
-#PBS -lselect=1:ncpus=8:mem=62gb
-#PBS -lwalltime=48:00:00
+#To submit a job the following 2 lines need to be present:
+#PBS -lselect=1:ncpus=8:mem=62gb  #number of nodes (1), cores (8) and memory (62gb)
+#PBS -lwalltime=48:00:00 #the longer the walltime, the larger the number, the lower down the queue the job is
 
 #Load in anaconda
 #Need this to activate a more updated python to run trim galore with more than 1 core
@@ -28,3 +29,4 @@ $RDS_PROJECT/ins_rna_seq/live/final_mergedfasta/${prefix}_R2_001_merged.fastq.gz
 done
 
 source deactivate
+
