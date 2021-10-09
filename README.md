@@ -13,4 +13,14 @@ Prior to analysing RNA-sequencing data, you need to pre process the data. This e
 
 <a href="https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md">User guide</a> for Trim Galore!
 
-<code> code </code>
+
+
+
+<h2> Submitting jobs </h2>
+
+<ul>
+
+ <li><code> qsub [script name]</code> submits the job </li>
+  <li><code> bash [script name]</code> runs the job live </li>
+  <li><code> qstat [script name]</code> checks status of the job </li>
+  </ul>
