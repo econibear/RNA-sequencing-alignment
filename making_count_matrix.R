@@ -1,4 +1,4 @@
-#Making count matrices
+#Making read count matrix ----
 
 #Load in required packages
 library(DESeq2) 
