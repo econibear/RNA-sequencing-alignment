@@ -32,7 +32,7 @@ After pre processing, normalisation and multiple QC steps occurs before the gene
 
 <h2> Feature counts</h2>
 
-To get this we first had to create a text file containing the sample numbers and timepoints. The R script called making_metadata_file_for_count_matrix.R creates this file from the list of file names directly from the STAR output folder. Then, as this takes a long time, we ran the creation of the count matrix through the HPC usiong featureCounts from the DESeq2 package. 
+To get this we first had to create a text file containing the sample numbers and timepoints. The R script called <code>making_metadata_file_for_count_matrix.R</code> creates this file from the list of file names directly from the STAR output folder. Then, as this takes a long time, we ran the creation of the count matrix through the HPC using featureCounts from the DESeq2 package. <code>count_matrix.R</code> was the R script used inside the <code>count_matrix_v2.sh</code>.
 
 
 <h2> Submitting jobs </h2>
