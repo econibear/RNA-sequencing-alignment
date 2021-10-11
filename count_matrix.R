@@ -10,7 +10,7 @@ library(Rsubread)
 #Load in file with metadata in
 aligned = read.csv("aligned_sample_names_v2.csv")
 
-#For some reason it makes files a factor, so convert this to character for feature Counts
+#For some reason it makes files a factor, so convert this to character for featureCounts
 files <- aligned$final_name
 files1 = as.character(files)
 
