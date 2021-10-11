@@ -1,5 +1,6 @@
-#Making count matrices
+#Creating metadata file for input into featureCounts
 
+#Load in libraries required
 library(DESeq2)
 library(RColorBrewer)
 library(gplots)
@@ -8,11 +9,7 @@ library(Rsubread)
 #Set working directory
 setwd("/Volumes/ec1016/projects/ins_rna_seq/live")
 
-#Load in the metadata
-metadata = read.delim("Sample_list_sent_for_sequencing.txt", header=T)
-head(metadata)
-
-
+#Load in the file containing all of the samples sent for sequencing
 aligned = read.delim("alignedsamplenames.txt")
 
 
@@ -31,6 +28,7 @@ for(i in 1:nrow(aligned)) {
 }
 head(aligned)
 
+#Save file
 write.csv(aligned, "aligned_sample_names_v2.csv")
 
 
